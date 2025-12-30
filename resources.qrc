@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>db/jeopardy.db</file>
+    </qresource>
+</RCC>
+

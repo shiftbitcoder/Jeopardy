@@ -1,0 +1,4 @@
+#ifndef QUESTIONDIALOG_H
+#define QUESTIONDIALOG_H
+
+#endif // QUESTIONDIALOG_H
