@@ -7,7 +7,9 @@
 struct Questions{
     int q_id;
     int cat_id;
-    Level level;
+    QString question;
+    QString answer;
+    int level;
 
 };
 
