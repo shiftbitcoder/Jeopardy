@@ -9,7 +9,7 @@ struct Questions{
     int cat_id;
     QString question;
     QString answer;
-    int level;
+    Level level;
 
 };
 

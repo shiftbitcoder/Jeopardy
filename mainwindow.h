@@ -2,20 +2,24 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+#include "ui_mainwindow.h"   // <-- Include this!
+#include "gameboard.h"
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui;  // now Ui::MainWindow is defined
+    GameBoard gameBoard;
+
+    //void updateCategoryLabels();
 };
+
 #endif // MAINWINDOW_H
+
+

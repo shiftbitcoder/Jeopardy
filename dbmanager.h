@@ -8,10 +8,11 @@
 
 
 
-class dbmanager
+class DbManager
 {
 public:
-    dbmanager();
+    DbManager();
+    ~DbManager();
     bool openDatabase();
 
     QList<Category> loadRandomCategories();

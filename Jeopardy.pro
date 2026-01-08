@@ -3,7 +3,7 @@ RESOURCES += resources.qrc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -14,7 +14,7 @@ SOURCES += \
     gameboard.cpp \
     main.cpp \
     mainwindow.cpp \
-    qdial.cpp
+    qDisplay.cpp
 
 HEADERS += \
     categories.h \
@@ -22,7 +22,7 @@ HEADERS += \
     gameboard.h \
     gametypes.h \
     mainwindow.h \
-    qdial.h \
+    qDisplay.h \
     questions.h \
     team.h
 
