@@ -7,7 +7,7 @@
 
 struct Category{
     int cat_id;
-    QString name;
+    QString cat_name;
     QList<Questions> questions;
 };
 

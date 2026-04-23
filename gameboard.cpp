@@ -26,7 +26,7 @@ void GameBoard::updateCategoryLabels()
     QStringList labels = { "cat1", "cat2", "cat3", "cat4", "cat5" };
 
     for (int i = 0; i < categories.size() && i < 5; ++i) {
-        labels[i] = categories[i].name;
+        labels[i] = categories[i].cat_name;
     }
 
     ui->cat1->setText(labels[0]);

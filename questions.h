@@ -5,8 +5,8 @@
 #include <gametypes.h>
 
 struct Questions{
-    int q_id;
-    int cat_id;
+    int question_id;
+    int qcat_id;
     QString question;
     QString answer;
     Level level;
