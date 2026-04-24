@@ -10,6 +10,7 @@ struct Questions{
     QString question;
     QString answer;
     Level level;
+    int points;
 
 };
 

@@ -14,7 +14,7 @@ SOURCES += \
     gameboard.cpp \
     main.cpp \
     mainwindow.cpp \
-    qDisplay.cpp
+    questiondialog.cpp
 
 HEADERS += \
     categories.h \
@@ -22,12 +22,29 @@ HEADERS += \
     gameboard.h \
     gametypes.h \
     mainwindow.h \
-    qDisplay.h \
+    questionDialog.h \
+    questiondialog.h \
     questions.h \
     team.h
 
 FORMS += \
-    ui/mainwindow.ui
+    ui/mainwindow.ui \
+    ui/questiondialog.ui
+
+TRANSLATIONS += \
+    Jeopardy_en_US.ts
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    db/jeopardy \
+    db/jeopardy.sqbpro
+
+RESOURCES += \
+    resources.qrc
 
 TRANSLATIONS += \
     Jeopardy_en_US.ts

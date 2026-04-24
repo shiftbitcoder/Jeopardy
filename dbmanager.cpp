@@ -163,6 +163,7 @@ QList<Questions> DbManager::loadRandomQuestions(int category_id)
             q.question    = query.value("question").toString();
             q.answer      = query.value("answer").toString();
             q.level       = lvl;
+            q.points      = points;
 
             questions.append(q);
 
