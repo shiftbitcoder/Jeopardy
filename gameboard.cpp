@@ -95,6 +95,7 @@ void GameBoard::handleQuestionClicked(int cat, int q, QPushButton* button)
     );
 
     dlg.exec();
+    addScore(question.points);
 
     // 🚨 MARK BUTTON AS USED AFTER DIALOG CLOSES
     button->setEnabled(false);
@@ -102,6 +103,36 @@ void GameBoard::handleQuestionClicked(int cat, int q, QPushButton* button)
         "background-color: #444;"
         "color: #999;"
     );
+}
+
+void GameBoard::addScore(int points)
+{
+    switch (currentTeam) {
+    case 1: TeamScore1 += points; break;
+    case 2: TeamScore2 += points; break;
+    case 3: TeamScore3 += points; break;
+    case 4: TeamScore4 += points; break;
+    }
+
+    updateScoreUI();
+}
+
+void GameBoard::updateScoreUI()
+{
+    if (ui->TeamScore1)
+        ui->TeamScore1->setText(QString::number(TeamScore1));
+
+    if (ui->TeamScore2)
+        ui->TeamScore2->setText(QString::number(TeamScore2));
+
+    if (teamCount >= 3 && ui->TeamScore3)
+        ui->TeamScore3->setText(QString::number(TeamScore3));
+
+    if (teamCount >= 4 && ui->TeamScore4)
+        ui->TeamScore4->setText(QString::number(TeamScore4));
+
+    if (ui->PresenterScore)
+        ui->PresenterScore->setText(QString::number(PresenterScore));
 }
 
 

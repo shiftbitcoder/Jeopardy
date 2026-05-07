@@ -27,12 +27,21 @@ public:
 private:
     Ui::MainWindow* ui;
     DbManager dbManager;
+    int currentTeam    = 1;
+    int teamCount      = 2;
+    int TeamScore1     = 0;
+    int TeamScore2     = 0;
+    int TeamScore3     = 0;
+    int TeamScore4     = 0;
+    int PresenterScore = 0;
 
     QList<Category> categories;
     QList<QList<Questions>> questions;
 
     void updateCategoryLabels();
     void updateQuestionButtons();
+    void addScore (int points);
+    void updateScoreUI();
 };
 
 #endif // GAMEBOARD_H
